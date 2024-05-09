@@ -1,6 +1,6 @@
 # Testing and CI integration
 ## Техническое задание 2 
-![Java CI with Maven](https://github.com/zpankova/CI_Rep_New/actions/workflows/maven.yml/badge.svg)
+![Java CI with Maven](https://github.com/zpankova/CIRep_New/actions/workflows/maven.yml/badge.svg)
 ### Описание проекта: 
 #### Задачи: 
 1. Написать программу на Java, которая будет считывать из файла числа, а далее отдельными функциями искать среди этих чисел минимальное число, максимальное число, считать их общую сумму и произведение.
