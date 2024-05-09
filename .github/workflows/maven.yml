@@ -31,6 +31,7 @@ jobs:
       run: mvn -B package --file pom.xml
     - name: Run Tests
       run: mvn -B test --file pom.xml
+    - name: Telegram fail message
       if: failure()
       env:
         TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
