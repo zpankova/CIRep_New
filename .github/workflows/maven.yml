@@ -39,7 +39,7 @@ jobs:
       run: |
             MESSAGE="Проект завершился с ошибкой. Лог тестирования:"
             FAILED_TESTS=$(cat target/surefire-reports/org.example.NumbersProcessorTest.txt)
-            curl -s -X POST https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage -d "chat_id=${CHAT_ID}&text=${MESSAGE} ${FAILED_TESTS}"
+            curl -s -X POST https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage -d "chat_id=${CHAT_ID}&text=${MESSAGE} ${FAILED_TESTS}"
     - name: Telegram success message
       if: success()
       env:
