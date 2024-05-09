@@ -34,7 +34,7 @@ jobs:
     - name: Telegram fail message
       if: failure()
       env:
-        TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+        TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
         CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
       run: |
             MESSAGE="Проект завершился с ошибкой. Лог тестирования:"
@@ -43,11 +43,11 @@ jobs:
     - name: Telegram success message
       if: success()
       env:
-        TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+        TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
         CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
       run: |
         MESSAGE="Все ок"
-        curl -s -X POST https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage -d "chat_id=${CHAT_ID}&text=${MESSAGE}"
+        curl -s -X POST https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage -d "chat_id=${CHAT_ID}&text=${MESSAGE}"
   
             
  
