@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class NumbersProcessorTest {
     @Test
     public void min() {
-        assertEquals(5, NumbersProcessor.min("test1.txt"));
+        assertEquals(1, NumbersProcessor.min("test1.txt"));
         assertEquals(0, NumbersProcessor.min("test2.txt"));
         assertEquals(-5, NumbersProcessor.min("test3.txt"));
     }
